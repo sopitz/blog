@@ -1,0 +1,356 @@
+#header_sidebar{
+	//border-right: 1px solid @gray-lighter;
+	height: 100%;
+	outline: none;
+	z-index: 3;
+	opacity: 0;
+	.make-md-column(4);
+	background-color: @header_bg;
+	color: @header_color;
+}
+.author-template #header_sidebar, .tag-template #header_sidebar, .page-template #header_sidebar{
+	.make-md-column(12);
+}
+.no-js #header_sidebar{
+	opacity: 1;
+}
+#header{
+	margin-bottom: 2.14285714285714em;
+	position: relative;
+}
+
+.sub_header{
+	background-color: #4c4c4c;
+	color: @gray-light;
+	font-size: 0.84615384615385em;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+}
+.sub_header p{
+
+}
+.logo_container{
+	margin: 30px 0;
+	margin: 2.14285714285714rem 0;
+	text-align: center;
+	text-align: left;
+}
+.logo_container .ql_logo{
+	font-size: 30px;
+	font-size: 2.14285714285714rem;
+	color: @logo_color;
+	font-weight: bold;
+
+}
+.logo_container .ql_logo:hover{
+	text-decoration: none;
+}
+.logo_container .logo_desc{
+	text-align: left;
+	font-family: @font-family-serif;
+	font-style: italic;
+	color: fade(@header_color, 80%);
+	font-size: 12px;
+	font-size: 0.85714285714286rem;
+}
+
+
+/*-----------------------------*/
+
+.header_line{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	border-right: 1px solid @border_color;
+	width: 100%;
+	-webkit-backface-visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+Nav Menu
+---------------------------------------*/
+
+
+#jqueryslidemenu .navbar-toggle .icon-bar{
+	background-color: @heroColor;
+}
+.navbar-inner {
+	background: transparent;
+
+}
+#ql_navbar_collapse{
+	padding: 0;
+}
+
+ .jqueryslidemenu #nav{
+ 	float: none;
+	
+}
+/*Top level list items*/
+ .jqueryslidemenu .nav > li{
+ 	float: none;
+}
+/*Top level menu link items style*/
+ .jqueryslidemenu .nav > li > a{
+	text-decoration: none;
+	font-weight: bold;
+	color: @header_color;
+	font-size: 13px;
+	font-size: 0.92857142857143rem;
+	padding: 5px 0!important;
+	text-transform: uppercase;
+	display: block;
+    vertical-align: middle;
+    .transition( all 200ms ease-in-out);
+}
+
+ .jqueryslidemenu .nav > li > a:hover{
+	background-color: transparent;
+	color: darken(@header_color, 20%);
+}
+.jqueryslidemenu .nav > li > a:hover, .jqueryslidemenu .nav > li > a:focus{
+	background-color: transparent;
+}
+.dropdown-toggle b{
+	color: #a7a7a7;
+	height: 15px;
+	font-size: 14px;
+	font-size: 1rem;
+}
+
+ .jqueryslidemenu .current_page_item > a,  .jqueryslidemenu .current_page_parent > a{
+
+	
+}
+ .jqueryslidemenu .current_page_item > a:hover,  .jqueryslidemenu .current_page_parent > a:hover{
+
+}
+
+
+/* When the menu is open*/
+.navbar .nav .open > .dropdown-toggle{
+	background: transparent!important;
+}
+
+.in .jqueryslidemenu .nav  li:hover >  a{
+	background: #f8f8f8;
+	.box-shadow(none);
+	border-bottom:none!important;
+}
+
+
+
+.nav .open > a:focus{
+	color: @heroColor;
+}
+
+/*1st sub level menu*/
+ .jqueryslidemen.nav li ul{
+	padding: 0!important;
+	left: 0;
+	border-radius:0;
+	width: 100%;
+	position: relative;
+	border:0;
+	margin-bottom: 10px;
+	margin-top: 0;
+	.box-shadow(none);
+  	
+}
+
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+ .jqueryslidemenu ul li ul li{
+border-bottom: 1px solid #f2f2f2;
+}
+.in .jqueryslidemenu ul li ul li{
+border-bottom: none;
+}
+
+/* Sub level menu links style */
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul.children, .jqueryslidemenu ul li ul.sub-menu{
+	display: none;
+}
+
+.jqueryslidemenu ul li.open > ul.children, .jqueryslidemenu ul li.open ul.sub-menu{
+	display: block;
+}
+
+.jqueryslidemenu .navbar-nav .open .dropdown-menu > li > a{
+	line-height: 30px;
+}
+
+ .jqueryslidemenu ul li ul li a{
+height:30px;
+line-height: 30px;
+padding: 0px 15px!important;
+font-size: 0.84615384615385em;
+font-weight: bold;
+}
+
+.jqueryslidemenu ul li ul li a:hover{ /*sub menus hover style*/
+
+}
+
+/*For 3rd level in Bootstrap*/
+.dropdown-menu .sub-menu, .dropdown-menu .children {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: -1px;
+    list-style: none;
+}
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu li:hover .sub-menu, .dropdown-menu li:hover .children  {
+    visibility: visible;
+    display: block;
+    left: 85%
+}
+
+/* Select Navigation */
+.tinynav { 
+	display: none;
+	height: 2.2em;
+	font-size: 1em;
+	margin: 0 auto 1.2em auto;
+ }
+/*
+End Nav Menu
+---------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Header Text
+---------------------------------------*/
+#header_bottom{
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	left: 0;
+	right: 0;
+	padding: 0 20px;
+	text-align: center;
+}
+#header_bottom p{
+	font-size: 0.84615384615385em;
+}
+
+
+/*
+==========================================
+Sub Footer
+========================================== 
+*/
+
+.sub_footer{
+	margin: 0 0 2.14285714285714em 0;
+}
+
+.sub_footer p{
+	color: fade(@header_color, 80%);
+	margin-bottom: 0;
+	font-size: 0.78571428571429em;
+	margin-top: 20px;
+}
+
+
+
+
+
+/*
+Social Nav
+---------------------------------------*/
+.nav_social{
+	text-align: center;
+	position: relative;
+	margin-bottom: 0;
+	margin-right: 0;
+}
+.nav_social li{
+	margin: 0 3px 0px 0;
+	
+	display: inline-block;
+	position: relative;
+}
+.nav_social li a i{
+
+}
+
+.nav_social li a{
+	text-align: center;
+	line-height: 35px;
+	font-size: 16px;
+	font-weight: normal;
+	color: @header_color;
+	display: block;
+	width: 35px;
+	height: 35px;
+	padding: 0!important;
+	position: relative;
+	z-index: 5;
+	left: 1px;
+	.transition( all 100ms linear);
+	border-radius: 35px;
+}
+.nav_social li a:hover{
+	color: @white;
+}
+.nav_social li.n_facebook a:hover {background-color:#3B5998;}
+
+.nav_social li.n_twitter a:hover {background-color:#33CCFF;}
+
+.nav_social li.n_dribbble a:hover {background-color:#C5376D;}
+
+.nav_social li.n_instagram a:hover {background-color:#427097;}
+
+.nav_social li.n_flickr a:hover {background-color:#FF0084;}
+
+.nav_social li.n_youtube a:hover {background-color:#C1302A;}
+
+.nav_social li.n_vimeo a:hover {background-color:#1AB7EA;}
+
+.nav_social li.n_foursquare a:hover {background-color:#1DAFEC;}
+
+.nav_social li.n_skype a:hover {background-color:#00AFF0;}
+
+.nav_social li.n_google-plus a:hover {background-color:#D5402B;}
+
+.nav_social li.n_tumblr a:hover {background-color:#343B4A;}
+
+.nav_social li.n_linkedin a:hover {background-color:#0073B2;}
+
+.nav_social li.n_pinterest a:hover {background-color:#CB2027;}
+
+.nav_social li.n_rss a:hover {background-color:#FF6600;}
+

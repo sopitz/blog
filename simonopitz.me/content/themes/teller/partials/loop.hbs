@@ -1,0 +1,37 @@
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+    <article id="list_post-{{id}}" class="{{post_class}} {{status}} {{#if featured}}featured{{/if}} {{#if image}}has-post-image{{/if}}">
+    <div class="current_line"></div>
+        {{#if image}}
+            {{^is 'tag, author'}}
+            <a href="{{url}}">
+            <div class="post_thumbnail"><img src="{{image}}" alt="{{title}}"></div>
+            </a>
+            {{/is}}
+        {{/if}}
+
+        <div class="post_wrap">
+
+            <h2 class="post_title"><a href="{{url}}">{{title}}</a></h2>
+
+            {{^is 'author'}}            
+            <div class="post_content">
+                <p>{{excerpt words="26"}}</p>
+                <div class="clearfix"></div>
+            </div><!-- /post_content -->
+            {{/is}}
+
+            {{> "metadata"}}
+        </div><!-- /post_wrap -->
+
+        <div class="clearfix"></div>
+
+
+
+        <i class="fa fa-star featured_star"></i>
+        <div class="clearfix"></div>
+    </article>
+{{/foreach}}
+
+
+{{pagination}}

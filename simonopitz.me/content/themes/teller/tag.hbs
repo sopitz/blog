@@ -1,0 +1,29 @@
+{{!< default}}
+
+    {{> "before-page-content"}}
+		{{#tag}}
+    	<div class="tag-cover {{#if image}}" style="background-image: url({{image}}); {{else}}no-cover{{/if}}"></div>
+                <div class="tag-content">
+                    <h1 class="tag-title"><span>Tag:</span> {{name}}</h1>
+                    <p class="tag-bio">{{#if description}}
+                    {{description}}
+                {{else}}
+                    A {{pagination.total}}-post collection
+                {{/if}}</p>
+
+                    <ul class="tag-meta">
+                        <li class="tag-stats"><i class="fa fa-pencil"></i>{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</li>
+                    </ul>
+        </div><!-- /tag-content -->
+		{{/tag}}
+
+
+
+
+        <div class="tag-post-list">
+        {{> "loop"}}
+        </div><!-- /tag-post-list -->
+
+    {{> "after-page-content"}}
+
+

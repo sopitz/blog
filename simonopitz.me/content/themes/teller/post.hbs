@@ -1,0 +1,18 @@
+{{!< default}}
+
+        <div class="col-md-8 col-sm-12 ql_post_list">
+        </div><!-- /ql_post_list -->
+
+
+    {{> "before-post-content"}}
+    
+        
+            {{! Everything inside the #post tags pulls data from the post }}
+            {{#post}}
+
+                {{> "post"}}
+
+            {{/post}}
+
+
+    {{> "after-post-content"}}

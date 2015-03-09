@@ -1,0 +1,32 @@
+{{!< default}}
+
+    {{> "before-page-content"}}
+
+        {{#author}}
+                <div class="author-cover" style="background: url( {{cover}})">
+                    {{#if image}}
+                        <div class="author-image_wrap">
+                            <figure class="author-image">
+                                <img src="{{image}}" alt="{{name}}">
+                            </figure>
+                        </div>
+                    {{/if}}
+                </div>
+                <div class="author-content">
+                    <h1 class="author-title">{{name}}</h1>
+                    <p class="author-bio">{{bio}}</p>
+
+                    <ul class="author-meta">
+                        <li class="author-location"><i class="fa fa-map-marker"></i>{{location}}</li>
+                        <li class="author-link"><i class="fa fa-link"></i><a href="{{website}}">{{website}}</a></li>
+                        <li class="author-stats"><i class="fa fa-pencil"></i>{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</li>
+                    </ul>
+                </div><!-- /author-content -->
+        {{/author}}
+        
+        <div class="author-post-list">
+        {{> "loop"}}
+        </div><!-- /author-post-list -->
+
+
+    {{> "after-page-content"}}

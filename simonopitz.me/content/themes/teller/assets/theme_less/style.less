@@ -1,0 +1,222 @@
+/*
+Theme Name: Teller
+Theme URI: http://www.quemalabs.com
+Description: A Premium Ghost Theme.
+Version: 1.2.0
+Author: Quema Labs
+Author URI: http://www.quemalabs.com
+*/
+
+/*
+==========================================
+Theme Styles
+========================================== 
+*/
+
+html{font-size: 0.87em;}
+*{.box-sizing(border-box);}
+body{background-color: @backgroundColor;}
+#wrap{
+	position: relative;
+	height: 100%;
+}
+
+
+
+h1, h2, h3, h4, h5, h1 a, h2 a, h3 a, h4 a, h5 a{
+	color: @gray-dark;
+	font-family: "Open Sans";
+	margin-top: 0;
+}
+
+
+
+
+/*
+==========================================
+Header
+========================================== 
+*/
+@import "header.less";
+
+
+
+/*
+==========================================
+Container
+========================================== 
+*/
+#container, #container_post{
+	margin-left: 0;
+}
+#container{
+	width: 585px;
+	position: fixed!important;
+	top: 0;
+	left: 0;
+	bottom: -9999; /*Chrome bug*/
+	z-index: 3;
+	bottom: 0;
+}
+.home-template #container{
+	width: 585px;
+}
+.author-template #container, .tag-template #container, .page-template #container{
+	width: 196px;
+}
+
+#container_post{
+	z-index: 2;
+}
+#container > .row{
+	height: 100%;
+	//position: fixed;
+	width: 585px;
+	top: 0;
+	bottom: 0;
+}
+.author-template #container > .row, .tag-template #container > .row, .page-template #container > .row{
+	width: 196px;
+}
+
+
+
+
+
+
+
+/*
+==========================================
+Blog & Pages
+========================================== 
+*/
+@import "blog_pages.less";
+
+
+
+
+/*
+==========================================
+Author Page
+========================================== 
+*/
+@import "author.less";
+
+
+/*
+==========================================
+Tag Page
+========================================== 
+*/
+@import "tag.less";
+.tag_content{
+	border-bottom: 1px dashed @gray-lighter;
+}
+.tag_content .page-title span{
+	color: lighten(@headings-color, 50%);
+}
+.tag-template .post_title{
+	font-size: 1.75em;
+}
+.tag-post-list article{
+	border-bottom: 1px solid @gray-lighter;
+}
+
+
+
+
+
+
+
+
+
+/*
+==========================================
+Global Styles
+========================================== 
+*/
+@import "global.less";
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+==========================================
+Responsive Styles
+========================================== 
+*/
+	/*
+	// Extra Small Breakpoint
+	// ------------------
+	*/
+	@import "mediaquery_xs.less";
+
+	/*
+	// Small Breakpoint
+	// ------------------
+	*/
+	@import "mediaquery_sm.less";
+
+	/*
+	// Medium Breakpoint
+	// ------------------
+	*/
+	@import "mediaquery_md.less";
+
+	/*
+	// Extra Larga Breakpoint
+	// ------------------
+	*/
+	@import "mediaquery_lg.less";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+==========================================
+LESS Variables and Mixins
+========================================== 
+*/
+@import "../less/variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "../less/mixins.less";
+
+
+
+
+
+
+
+
+
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } 
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}

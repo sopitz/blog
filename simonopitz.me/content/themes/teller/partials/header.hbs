@@ -1,0 +1,55 @@
+<div class="header_line"></div>
+<header id="header" class="">
+
+
+  <div class="logo_container">
+    {{#if @blog.logo}}<a class="ql_logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Logo" /></a>{{/if}}
+    <a href="{{@blog.url}}" class="ql_logo">{{@blog.title}}</a>
+    <p class="logo_desc">{{@blog.description}}</p>
+</div><!-- /logo_container -->
+
+
+<div class="clearfix"></div>
+
+<nav id="jqueryslidemenu" class="jqueryslidemenu ">
+   <ul id="nav" class="nav">
+      <li class="current_page_item"><a href="{{@blog.url}}" class="current_nav">Home</a></li>
+      <li><a href="{{@blog.url}}/about/">About</a></li>
+      <li><a target="_blank" href="mailto:demo@demo.com">Contact</a></li>
+  </ul>
+</nav>
+
+
+<div class="clearfix"></div>
+
+<hr class="ql_line"></hr>
+
+<div class="sub_footer">
+
+
+    <ul class="nav nav_social">
+      <li class="n_facebook"><a href="#" ><i class="fa fa-facebook"></i></a></li>
+      <li class="n_twitter"><a href="#" ><i class="fa fa-twitter"></i></a></li>
+      <li class="n_dribbble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+      <li class="n_instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+      <li class="n_foursquare"><a href="#"><i class="fa fa-foursquare"></i></a></li>
+      <li class="n_flickr"><a href="#"><i class="fa fa-flickr"></i></a></li>
+      <li class="n_youtube"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+      <li class="n_vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+      <li class="n_tumblr"><a href="#"><i class="fa fa-tumblr"></i></a></li>
+      <li class="n_skype"><a href="#"><i class="fa fa-skype"></i></a></li>
+      <li class="n_google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      <li class="n_pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+      <li class="n_linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+      <li class="n_rss"><a href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i></a></li>
+  </ul>
+
+
+<div class="clearfix"></div>
+
+<p class="pull-left">© Copyright {{date format="YYYY"}} - {{@blog.title}}</p>
+
+</div><!-- /sub_footer -->
+
+
+</header>

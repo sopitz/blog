@@ -1,0 +1,27 @@
+<article id="post-{{id}}" class="{{post_class}} {{status}} {{#if featured}}featured{{/if}} {{#if image}}has-post-image{{/if}}">
+
+    <h2 class="post_title">{{title}}</h2>
+    {{#if image}}
+    <div class="post_image">
+        <img src="{{image}}" alt="{{title}}">
+    </div><!-- /post_image -->
+    {{/if}}
+
+
+    <div class="post_content">
+
+        {{content}}
+        <div class="clearfix"></div>
+
+    </div><!-- /post_content -->
+
+    {{> "metadata"}}
+
+
+
+    <div class="clearfix"></div>
+
+
+</article>
+
+{{> "disqus"}}

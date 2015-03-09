@@ -1,0 +1,15 @@
+{{!< default}}
+
+    {{> "before-page-content"}}
+
+        {{! Everything inside the #post tags pulls data from the page }}
+        {{#post}}
+
+                <h1 class="post-title">{{title}}</h1>
+
+                <section class="post-content">
+                    {{content}}
+                </section>
+
+        {{/post}}
+    {{> "after-page-content"}}
