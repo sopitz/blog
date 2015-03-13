@@ -73,7 +73,7 @@ config = {
     // Used when developing Ghost to run tests and check the health of Ghost
     // Uses a different port number
     testing: {
-        url: 'http://81.169.231.211:2369',
+        url: 'http://test.simonopitz.me',
         database: {
             client: 'sqlite3',
             connection: {
@@ -81,7 +81,7 @@ config = {
             }
         },
         server: {
-            host: '81.169.231.211',
+            host: '0.0.0.0',
             port: '2369'
         },
         logging: false

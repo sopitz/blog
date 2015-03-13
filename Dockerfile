@@ -18,4 +18,4 @@ RUN git clone https://github.com/npm/npm.git
 RUN cd npm && make install
 
 RUN npm install -D sqlite3
-CMD cd /simonopitz.me && npm start --production && /bin/bash
+CMD cd /simonopitz.me && npm start --$stage && /bin/bash
