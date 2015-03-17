@@ -38,10 +38,6 @@ jQuery(document).ready(function($){
 
 
 
-	$("#searchform").submit(function(e) {
-		History.pushState({state: 'ajax'}, $("#searchsubmit").attr('value'), siteUrl + self.location.pathname.toString() + '?s=' + $("#s").val());
-	    e.preventDefault();
-	});
 
 
 

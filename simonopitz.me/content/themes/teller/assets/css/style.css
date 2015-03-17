@@ -2,7 +2,7 @@
 Theme Name: Teller
 Theme URI: http://www.quemalabs.com
 Description: A Premium Ghost Theme.
-Version: 1.2.0
+Version: 1.3.0
 Author: Quema Labs
 Author URI: http://www.quemalabs.com
 */
@@ -439,8 +439,8 @@ Blog & Pages
 .ql_post_list article {
   font-size: 13px;
   font-size: 0.8125em;
-  padding: 30px 15px;
-  padding: 2.14285714285714rem 15px;
+  padding: 30px;
+  padding: 2.14285714285714rem;
   margin-bottom: 0!important;
   opacity: 0;
   position: relative;
@@ -817,6 +817,92 @@ Author Page
 }
 .author-post-list article .post_title {
   font-size: 16px;
+}
+/*
+==========================================
+Search Page
+========================================== 
+*/
+/*
+==========================================
+Search Page
+========================================== 
+*/
+.search_form {
+  position: relative;
+  margin: 10px 0;
+}
+.search_form input {
+  height: 33px;
+  font-size: 12px;
+  border-color: #eeeeee;
+}
+.seach_submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  border: none;
+  padding: 0;
+}
+.search_form i {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  color: #bfbfbf;
+}
+.archives_title {
+  text-align: center;
+  margin-top: 50px;
+  border-bottom: 1px solid #bfbfbf;
+  padding: 15px 0;
+}
+.archives_post_list,
+.archives_list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.archives_post_list li,
+.archives_list li {
+  border-bottom: 1px dashed #eeeeee;
+  position: relative;
+}
+.archives_list li {
+  font-size: 14px;
+}
+.archives_post_list li h5,
+.archives_list li {
+  margin: 0;
+}
+.archives_post_list li h5 a,
+.archives_list li a {
+  color: #555555;
+  display: block;
+  padding: 15px 0;
+  -webkit-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
+}
+.archives_list li a {
+  padding: 10px 0;
+}
+.archives_post_list li h5 a:hover,
+.archives_list li a:hover {
+  background-color: #fafafa;
+  text-indent: 20px;
+  text-decoration: none;
+}
+.archives_post_list li time,
+.archives_list li time {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  display: block;
+  font-size: 12px;
+  color: #bfbfbf;
 }
 /*
 ==========================================

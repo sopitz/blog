@@ -15,6 +15,43 @@ jQuery(document).ready(function($) {
 				});//get
 			};
 			
+			//Search Plugin
+			$("#search-field").ghostHunter({
+			  results   : "#results",
+			  before          : function(){
+			  	      
+			  },
+			  onComplete      : function( results ){
+			  	$(".ql_post_list").remove();
+			  	$("body").addClass('tag-template').removeClass('home-template');
+			  	var search_value = $("#search-field").val();
+
+			  	var search_result = '';
+
+			  	switch (results.length) {
+				    case 0:
+				        search_result = 'No posts found';
+				    case 1:
+				        search_result = results.length + ' post';
+				    default:				    
+				        search_result = results.length + ' posts';
+			  	};
+			  	var search_header = '<article class="post animated fadeInUp" id="post-" style="animation-duration: 0.6s; animation-timing-function: ease-in-out;">    	<div class="tag-cover no-cover"></div><div class="tag-content"><h1 class="tag-title"><span>Search:</span> '+ search_value +'</h1><ul class="tag-meta"><li class="tag-stats"><i class="fa fa-pencil"></i>' + search_result + '</li></ul></div><!-- /tag-content -->';
+			  		$(".main_col").html(search_header).removeClass().addClass('col-md-8 col-lg-10 col-md-offset-2 col-sm-12 main_col');
+
+			  		var search_posts = '';
+			  		$(results).each(function(index, el) {
+			  			var search_post = '<li><h5><a href="'+ el.link +'">'+ el.title +'</a></h5><time>'+ el.pubDate.substring(0, el.pubDate.length - 12) +'</time><div class="clearfix"></div></li>';
+			  			search_posts = search_posts + search_post;
+			  		});
+
+
+			  		var search_list = '<ol class="archives_post_list">'+ search_posts +'<ol>';
+			  		$(search_list).appendTo('.main_col');
+			        console.log( results );
+			        //alert("results have been rendered");
+			    }
+			});
 
 
 
